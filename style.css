@@ -1,0 +1,54 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #f9f9f9;
+  margin: 20px;
+}
+
+/* Part 1: Button Hover + Box Animation */
+.fancy-btn {
+  padding: 12px 24px;
+  background: #4cafef;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+}
+.fancy-btn:hover {
+  transform: scale(1.1);
+  background: #357dcf;
+}
+
+/* Keyframe Animation */
+@keyframes slideFade {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  margin: 20px auto;
+  background: coral;
+  border-radius: 10px;
+}
+.animate-on-load {
+  animation: slideFade 2s ease forwards;
+}
+
+/* Part 3: JavaScript-triggered animation */
+#js-box {
+  width: 120px;
+  height: 120px;
+  margin: 20px auto;
+  background: lightgreen;
+  border-radius: 12px;
+  transition: transform 0.5s ease, background 0.5s ease;
+}
+#js-box.animate {
+  transform: rotate(180deg) scale(1.2);
+  background: darkgreen;
+}
